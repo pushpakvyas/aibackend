@@ -265,6 +265,10 @@ INTERVIEW RULES:
   }
 });
 
+app.get("/test",(req,res)=>{
+  return res.status(200).json({message:"server is running"})
+})
+
 app.post("/api/calculate-score", async (req, res) => {
   try {
     const { textTranscript } = req.body;
